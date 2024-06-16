@@ -20,8 +20,8 @@ const Home = () => {
   return (
     <div className="box">
       <div className='nav'>
-        <h1>Books List</h1>
-        <Link to='/books/create'><button>+</button></Link>
+        <h1>Book Store</h1>
+        <Link to='/books/create'><button className='add'>+</button></Link>
       </div>
         <ol>
           <li>
@@ -30,9 +30,14 @@ const Home = () => {
               <li> Title: {book.title} </li>
               <li> Author: {book.author}</li>
               <li> Published in the year {book.publishYear}</li>
-              <li><Link to={`books/details/${book._id}`}><button>Book Details</button></Link></li>
-              <li><Link to={`books/edit/${book._id}`}><button>Edit Book</button></Link></li>
-              <li><Link to={`books/delete/${book._id}`}><button>Delete Book</button></Link></li>     
+              <li>
+                <div className="options">
+                <Link to={`books/details/${book._id}`}><button className='link details'>Details</button></Link>
+                <Link to={`books/edit/${book._id}`}><button className='link edit'>Edit</button></Link>
+                <Link to={`books/delete/${book._id}`}><button className='link delete'>Delete</button></Link>
+                </div> 
+              </li>
+                  
             </ul>
       )}
           </li>

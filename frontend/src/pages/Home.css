@@ -2,6 +2,7 @@ body{
     background-color: #212341;
     color: aliceblue;
     font-family: monospace;
+    font-size: 1rem;
 }
 
 *{
@@ -24,5 +25,38 @@ body{
 }
 
 .item{
-    font-size: 1rem;
+    list-style-type: none;
+    margin: 1em;
+}
+
+.item .options{
+    margin-top: 0.5em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.link{
+    margin-right: 2em;
+    padding: 0.5em;
+    border-radius: 5px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+}
+
+.edit{
+    background-color: burlywood;
+}
+
+.details{
+    background-color: rgb(90, 206, 66);
+}
+
+.delete{
+    background-color: rgb(187, 49, 49);
+}
+
+.add{
+    font-weight: 900;
+    font-size: 1.5rem;
 }
