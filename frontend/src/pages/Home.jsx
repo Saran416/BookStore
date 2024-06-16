@@ -18,30 +18,32 @@ const Home = () => {
   },[])
 
   return (
-    <div className="box">
+    <div>
       <div className='nav'>
         <h1>Book Store</h1>
         <Link to='/books/create'><button className='add'>+</button></Link>
       </div>
+      <div className="items">
         <ol>
-          <li>
-          {books.map((book)=> 
-            <ul key={book._id} className='item'>
-              <li> Title: {book.title} </li>
-              <li> Author: {book.author}</li>
-              <li> Published in the year {book.publishYear}</li>
-              <li>
-                <div className="options">
-                <Link to={`books/details/${book._id}`}><button className='link details'>Details</button></Link>
-                <Link to={`books/edit/${book._id}`}><button className='link edit'>Edit</button></Link>
-                <Link to={`books/delete/${book._id}`}><button className='link delete'>Delete</button></Link>
-                </div> 
-              </li>
-                  
-            </ul>
-      )}
-          </li>
-        </ol>
+            <li>
+            {books.map((book)=> 
+              <ul key={book._id} className='item'>
+                <li> Title: {book.title} </li>
+                <li> Author: {book.author}</li>
+                <li> Published in the year {book.publishYear}</li>
+                <li>
+                  <div className="options">
+                  <Link to={`books/details/${book._id}`}><button className='link details'>Details</button></Link>
+                  <Link to={`books/edit/${book._id}`}><button className='link edit'>Edit</button></Link>
+                  <Link to={`books/delete/${book._id}`}><button className='link delete'>Delete</button></Link>
+                  </div> 
+                </li>
+                    
+              </ul>
+            )}
+            </li>
+          </ol>
+      </div>
     </div>
   )
 }
