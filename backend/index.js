@@ -5,16 +5,18 @@ import cors from 'cors'
 import mongoose from "mongoose"
 
 const app = express()
+
+app.use(cors())
 app.use(express.json())
 app.use('/books',bookRouter)
 
 
-const corsOptions = {
-    credentials: true,
-    origin: ['http://localhost/*'] 
-};
+// const corsOptions = {
+//     credentials: true,
+//     origin: ['http://localhost/*'] 
+// };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
 mongoose.connect("mongodb://localhost:27017/book-store").then(()=>{
     console.log("Successfully connected to Database")
