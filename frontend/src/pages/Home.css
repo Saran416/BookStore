@@ -1,0 +1,28 @@
+body{
+    background-color: #212341;
+    color: aliceblue;
+    font-family: monospace;
+}
+
+*{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.nav h1{
+    background-color: #757BE1;
+    padding: 1em;
+}
+
+.nav button{
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    margin: 1rem;
+    background-color: #a9adec;
+}
+
+.item{
+    font-size: 1rem;
+}
