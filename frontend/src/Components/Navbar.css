@@ -1,0 +1,14 @@
+.site-name{
+    background-color: #757BE1;
+    padding: 1em;
+    text-decoration: none;
+    color:aliceblue;
+}
+
+.site-name:visited{
+    color: aliceblue;
+}
+
+.site-name:focus{
+    color: aliceblue;
+}

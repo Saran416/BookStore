@@ -16,13 +16,7 @@ body{
     padding: 1em;
 }
 
-.nav button{
-    border-radius: 50%;
-    height: 2rem;
-    width: 2rem;
-    margin: 1rem;
-    background-color: #a9adec;
-}
+
 
 .item{
     list-style-type: none;
@@ -45,20 +39,43 @@ body{
 }
 
 .edit{
-    background-color: burlywood;
+    background-color: rgb(255, 179, 80);
+}
+
+.edit:hover{
+    background-color: rgb(177, 125, 57);
 }
 
 .details{
     background-color: rgb(90, 206, 66);
 }
 
+.details:hover{
+    background-color: rgb(51, 119, 38);
+}
+
 .delete{
     background-color: rgb(187, 49, 49);
+}
+
+.delete:hover{
+    background-color: rgb(114, 30, 30);
 }
 
 .add{
     font-weight: 900;
     font-size: 1.5rem;
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    margin: 1rem;
+    background-color: #a9adec;
+}
+
+.add:hover{
+    font-weight: 900;
+    font-size: 1.5rem;
+    background-color: #606288;
 }
 
 .items{

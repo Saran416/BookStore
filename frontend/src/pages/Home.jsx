@@ -2,6 +2,7 @@ import axios from 'axios'
 import {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import './Home.css'
+import Navbar from '../Components/Navbar'
 
 const Home = () => {
   const [books,setBooks] = useState([])
@@ -19,11 +20,9 @@ const Home = () => {
 
   return (
     <div>
-      <div className='nav'>
-        <h1>Book Store</h1>
-        <Link to='/books/create'><button className='add'>+</button></Link>
-      </div>
+      <Navbar></Navbar>
       <div className="items">
+      <Link to='/books/create'><button className='add'>+</button></Link>
         <ol>
             <li>
             {books.map((book)=> 
