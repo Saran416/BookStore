@@ -24,9 +24,9 @@ const Home = () => {
       <div className="items">
       <Link to='/books/create'><button className='add'>+</button></Link>
         <ol>
-            <li>
             {books.map((book)=> 
-              <ul key={book._id} className='item'>
+            <li key={book._id} className='book'>
+              <ul className='item'>
                 <li> Title: {book.title} </li>
                 <li> Author: {book.author}</li>
                 <li> Published in the year {book.publishYear}</li>
@@ -36,11 +36,11 @@ const Home = () => {
                   <Link to={`books/edit/${book._id}`}><button className='link edit'>Edit</button></Link>
                   <Link to={`books/delete/${book._id}`}><button className='link delete'>Delete</button></Link>
                   </div> 
-                </li>
-                    
+                </li>      
               </ul>
-            )}
             </li>
+            )}
+            
           </ol>
       </div>
     </div>

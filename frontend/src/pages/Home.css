@@ -17,7 +17,6 @@ body{
 }
 
 
-
 .item{
     list-style-type: none;
     margin: 1em;
@@ -80,4 +79,8 @@ body{
 
 .items{
     padding-left: 1em;
+}
+
+.book{
+    margin-bottom: 3em;
 }
