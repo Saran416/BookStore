@@ -1,6 +1,12 @@
 import express from 'express'
 import bookModel from '../Models/BookModel.js'
+// import mongoose from 'mongoose'
 
+// const bookSchema = new mongoose.Schema({
+//     name: {type: String, required: true},
+//     author: {type: String, required: true},
+//     publishYear: {type: Number, required: true},
+// })
 
 const bookRouter = express.Router()
 
@@ -8,16 +14,21 @@ const bookRouter = express.Router()
 bookRouter.post('/',async (req,res)=>{
     try{
         if(
-            !req.body.title || !req.body.author || !req.body.publishYear
+            !req.body.title || 
+            !req.body.author || 
+            !req.body.publishYear
         ){
             return response.status(400).send({message: "Fill all the required fields"})
         }
-        const newBook = {title: req.body.title,
+        const newBook = {
+            title: req.body.title,
             author : req.body.author,
             publishYear: req.body.publishYear
-        }
+        };
 
         const book = await bookModel.create(newBook)
+
+        console.log("Got the Book")
 
         return res.status(201).send(book);
     }catch(error){
@@ -65,10 +76,11 @@ bookRouter.put("/:id", async(req,res)=>{
 
         if(!result){
             return res.status(404).send({message: "book not found"})
-        }else{
-            res.status(200).send({message: "book updated succesfully"})
+        }
+
+        res.status(200).send({message: "book updated succesfully"})
     }
-    }catch(error){
+    catch(error){
         console.log(error.message)
         response.status(500).send({message: error.message})
     }

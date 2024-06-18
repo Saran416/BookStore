@@ -8,6 +8,9 @@ const app = express()
 
 app.use(cors())
 app.use(express.json())
+app.use(
+    express.urlencoded({ extended: true })
+);
 app.use('/books',bookRouter)
 
 mongoose.connect("mongodb://localhost:27017/book-store").then(()=>{

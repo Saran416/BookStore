@@ -5,11 +5,7 @@ const bookSchema = new mongoose.Schema({
     author: {type: String, required: true},
     publishYear: {type: Number, required: true},
 
-},
-{
-    timestamps: true,
-}
-)
+})
 
 const bookModel = mongoose.model('books',bookSchema)
 
