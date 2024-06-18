@@ -1,0 +1,27 @@
+.message-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+} 
+
+.message{
+    align-self: center;
+    margin-top: 30vh;
+    display: flex;
+    flex-direction: column;
+    padding: 4em;
+    background-color: #757BE1;
+    border-radius: 10px;
+}
+
+.sure{
+    background-color: red;
+    padding: 0.5em;
+    width: 5em;
+    border-radius: 5em;
+    align-self: center;
+    color: black;
+    font-weight: 900;
+    margin-top: 2em;
+}

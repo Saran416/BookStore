@@ -1,6 +1,7 @@
 import { useState} from 'react'
 import Navbar from '../Components/Navbar'
 import axios from 'axios'
+import './CreateBook.css'
 // import { useNavigate } from 'react-router-dom'
 
 const CreateBook = () => {
@@ -29,6 +30,8 @@ const CreateBook = () => {
   return (
     <div>
       <Navbar></Navbar>
+      <h2>Adding Book</h2>
+      <div className="message-container">
       <div className="form">
           <label>Author:</label>
           <input type="text" onChange={(e)=>setTitle(e.target.value)} value={title} required/>
@@ -36,7 +39,8 @@ const CreateBook = () => {
           <input type="text" onChange={(e)=>setAuthor(e.target.value)} value={author} required/>
           <label>publishYear:</label>
           <input type="number" onChange={(e)=>setPublishYear(e.target.value)} value={publishYear} required/>
-          <button onClick={handleCreate}>Add</button>
+          <button onClick={handleCreate} className='create-add'>Add</button>
+      </div>
       </div>
     </div>
   )

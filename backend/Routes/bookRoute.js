@@ -20,13 +20,16 @@ bookRouter.post('/',async (req,res)=>{
         ){
             return response.status(400).send({message: "Fill all the required fields"})
         }
+
+        console.log(req.body.title)
+
         const newBook = {
             title: req.body.title,
             author : req.body.author,
-            publishYear: req.body.publishYear
+            publishYear: req.body.publishYeart
         };
 
-        const book = await bookModel.create(newBook)
+        const book = await bookModel.create(req.body)
 
         console.log("Got the Book")
 

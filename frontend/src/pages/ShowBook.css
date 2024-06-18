@@ -1,0 +1,18 @@
+.book-details{
+    background-color: #757BE1;
+    color: aliceblue;
+    font-family: monospace;
+    font-size: 1rem;
+    margin-left: 1em;
+    margin-right: 1em;
+    border-radius: 10px;
+    padding: 2em;
+    font-weight: 600;
+}
+
+h2{
+    margin: 1em;
+}
+
+
+
