@@ -1,12 +1,6 @@
 import express from 'express'
 import bookModel from '../Models/BookModel.js'
-// import mongoose from 'mongoose'
 
-// const bookSchema = new mongoose.Schema({
-//     name: {type: String, required: true},
-//     author: {type: String, required: true},
-//     publishYear: {type: Number, required: true},
-// })
 
 const bookRouter = express.Router()
 

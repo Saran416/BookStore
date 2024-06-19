@@ -3,6 +3,7 @@ import {PORT} from './config.js'
 import bookRouter from "./Routes/bookRoute.js"
 import cors from 'cors'
 import mongoose from "mongoose"
+import { mongodbURL } from "./config.js"
 
 const app = express()
 
@@ -13,7 +14,7 @@ app.use(
 );
 app.use('/books',bookRouter)
 
-mongoose.connect("mongodb://localhost:27017/book-store").then(()=>{
+mongoose.connect(mongodbURL).then(()=>{
     console.log("Successfully connected to Database")
 }).catch((err)=>{
     console.log("Error: ",err)
