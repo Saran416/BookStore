@@ -15,6 +15,9 @@
     align-self: center;
     min-width: 50vw;
     margin-top: 10vh;
+    h5{
+        color: red;
+    }
 }
 
 .form input{
@@ -29,6 +32,7 @@
 
 .edit-add{
     margin-top: 0.5em;
+    margin-bottom: 0.5em;
     background-color: #212341;
     color: white;
     width: 5em;

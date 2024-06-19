@@ -69,6 +69,10 @@ body{
     width: 2rem;
     margin: 1rem;
     background-color: #a9adec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
 .add:hover{

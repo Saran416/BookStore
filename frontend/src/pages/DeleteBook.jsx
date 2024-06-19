@@ -2,6 +2,8 @@ import axios from "axios"
 import Navbar from "../Components/Navbar"
 import { useNavigate, useParams } from "react-router-dom"
 import './DeleteBook.css'
+import { Link } from 'react-router-dom'
+import { GoArrowLeft } from "react-icons/go";
 
 const DeleteBook = () => {
   const navigate = useNavigate();
@@ -16,6 +18,7 @@ const DeleteBook = () => {
   return (
     <div>
       <Navbar></Navbar>
+      <Link to='/'><button className='add'><GoArrowLeft /></button></Link>
       <div className="message-container">
       <div className="message">
         <h4>Are you sure you want to delete the Book</h4>

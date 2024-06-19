@@ -3,6 +3,8 @@ import axios from "axios"
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import './ShowBook.css'
+import { Link } from 'react-router-dom'
+import { GoArrowLeft } from "react-icons/go";
 
 const ShowBook = () => {
   const [book,setBook] = useState({});
@@ -20,6 +22,7 @@ const ShowBook = () => {
   return (
     <div>
       <Navbar></Navbar>
+      <Link to='/'><button className='add'><GoArrowLeft /></button></Link>
       <h2>Book Details</h2>
       <div className="book-details">
           <ul>

@@ -18,20 +18,15 @@ bookRouter.post('/',async (req,res)=>{
             !req.body.author || 
             !req.body.publishYear
         ){
-            return response.status(400).send({message: "Fill all the required fields"})
+            return res.status(400).send({message: "Fill all the required fields"})
         }
-
-        console.log(req.body.title)
-
         const newBook = {
             title: req.body.title,
             author : req.body.author,
-            publishYear: req.body.publishYeart
+            publishYear: req.body.publishYear
         };
 
-        const book = await bookModel.create(req.body)
-
-        console.log("Got the Book")
+        const book = await bookModel.create(newBook)
 
         return res.status(201).send(book);
     }catch(error){
@@ -57,7 +52,7 @@ bookRouter.get('/:id', async(req,res)=>{
         res.status(200).json(book)
     }catch(error){
         console.log(error.message)
-        response.status(500).send({message: error.message})
+        res.status(500).send({message: error.message})
     }
 })
 
@@ -68,14 +63,10 @@ bookRouter.put("/:id", async(req,res)=>{
         ){
             return response.status(400).send({message: "Fill all the required fields"})
         }
-        const newBook = {title: req.body.title,
-            author : req.body.author,
-            publishYear: req.body.publishYear
-        }
 
         const {id} = req.params;
 
-        const result = await bookModel.findByIdAndUpdate(req.body)
+        const result = await bookModel.findByIdAndUpdate(id, req.body)
 
         if(!result){
             return res.status(404).send({message: "book not found"})
@@ -85,7 +76,7 @@ bookRouter.put("/:id", async(req,res)=>{
     }
     catch(error){
         console.log(error.message)
-        response.status(500).send({message: error.message})
+        res.status(500).send({message: error.message})
     }
 })
 
