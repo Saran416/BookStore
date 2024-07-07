@@ -30,6 +30,7 @@ bookRouter.post('/',async (req,res)=>{
 })
 
 bookRouter.get('/', async(req,res)=>{
+    console.log('new connection')
     try{
         const books = await bookModel.find({});
         res.status(200).json({count: books.length, data: books})
